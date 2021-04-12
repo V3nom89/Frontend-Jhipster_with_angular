@@ -1,0 +1,209 @@
+<div class="container" >
+  <div class="row mt-5" >
+    <div class="col-md-1" >
+      
+
+      
+    </div>
+    <div class="col-md-10">
+      <table>
+        <tr>
+          <th>
+              ID Candidato
+          </th>
+          <th>
+              Nome
+          </th>
+          <th>
+              Cognome
+          </th>
+          <th>
+              Email
+          </th>
+          <th>
+            Codice Fiscale
+          </th>
+          <th>
+              Luogo di Provenienza
+          </th>
+          <th>
+             ID Skype
+          </th>
+          <th>
+              Numero di Telefono
+          </th>
+          <th>
+              Titolo di Studio
+          </th>
+          <th>
+              Titolo di Laurea
+          </th>
+          <th>
+              Data Candidatura
+          </th>
+          <th>
+              Range Data Candidatura
+          </th>
+          <th>
+              Colloquio Conoscitivo
+          </th>
+          <th>
+              Data Colloquio
+          </th>
+          <th>
+              Candidatura Tramite
+          </th>
+          <th>
+              Idoneità
+          </th>
+      </tr>
+        <tr>
+          <td>
+              <input placeholder="IdCandidato" [(ngModel)]="candidatitoinsert.id">
+          </td>
+          <td>
+              <input placeholder="Nome" [(ngModel)]="candidatitoinsert.nome">
+          </td>
+          <td>
+            <input placeholder="Cognome" [(ngModel)]="candidatitoinsert.cognome">
+          </td>
+          <td>
+              <input placeholder="Email" [(ngModel)]="candidatitoinsert.email">
+          </td>
+          <td>
+            <input placeholder="CodiceFiscale" [(ngModel)]="candidatitoinsert.codiceFiscale">
+          </td>
+          <td>
+            <input placeholder="luogoProvenienza" [(ngModel)]="candidatitoinsert.luogoProvenienza">
+          </td>
+          <td>
+            <input placeholder="IDSkype" [(ngModel)]="candidatitoinsert.idSkype">
+          </td>
+          <td>
+              <input placeholder="NumeroTelefono" [(ngModel)]="candidatitoinsert.numeroTelefono">
+          </td>
+          <td>
+            <select placeholder="TitoloStudio" [(ngModel)]="candidatitoinsert.titoloStudio">
+              <option value="Licenza Media">Licenza Media</option>
+              <option value="Diploma di Istruzione Secondaria Superiore">Diploma di Istruzione Secondaria Superiore</option>
+              <option value="Laurea Triennale">Laurea Triennale</option>
+              <option value="Laurea Specialistica">Laurea Specialistica</option>
+              <option value="Laurea a Ciclo Unico">Laurea a Ciclo Unico</option>
+              <option value="Dottorato di Ricerca">Dottorato di Ricerca</option>
+              <option value="Master Universitario">Master Universitario</option>
+              <option value="Altro">Altro</option>
+            </select>
+          </td>
+          <td>
+              <input placeholder="TitoloLaurea" [(ngModel)]="candidatitoinsert.titoloLaurea">
+          </td>
+          <td>
+            <input type="date" placeholder="DataCandidatura" [(ngModel)]="candidatitoinsert.dataCandidatura">
+          </td>
+          <td>
+              <input placeholder="RangeDataCandidatura" [(ngModel)]="candidatitoinsert.rangeDataCandidatura">
+          </td>
+          <td>
+            <select placeholder="ColloquioConoscitivo" [(ngModel)]="candidatitoinsert.colloquioConoscitivo">
+              <option value="true">SI</option>
+  				    <option value="false">NO</option>
+            </select>
+          </td>
+          <td>
+            <input type="date" placeholder="DataColloquio" [(ngModel)]="candidatitoinsert.DataColloquio">
+          </td>
+          <td>
+              <input placeholder="CandidatiTramite" [(ngModel)]="candidatitoinsert.candidatiTramite">
+          </td>
+          <td>
+            <select placeholder="Idoneita" [(ngModel)]="candidatitoinsert.idoneita">
+              <option value="true">SI</option>
+  			    	<option value="false">NO</option>
+            </select>
+          </td>
+          <td>
+            <button (click)="insert(candidatitoinsert)">Inserisci</button>
+          </td>
+          <td>
+            <button (click)="clear()">Cancella</button>
+          </td>
+        </tr>
+        <tr *ngFor="let candidati of candidati">
+          <td>
+              
+              <input  [(ngModel)]="candidati.id">
+            </td>
+            <td>
+                <input  [(ngModel)]="candidati.nome">
+            </td>
+            <td>
+              <input  [(ngModel)]="candidati.cognome">
+            </td>
+            <td>
+                <input  [(ngModel)]="candidati.email">
+            </td>
+            <td>
+              <input  [(ngModel)]="candidati.codiceFiscale">
+            </td>
+            <td>
+              <input  [(ngModel)]="candidati.luogoProvenienza">
+            </td>
+            <td>
+              <input  [(ngModel)]="candidati.idSkype">
+            </td>
+            <td>
+                <input  [(ngModel)]="candidati.numeroTelefono">
+            </td>
+            <td>
+              <select  [(ngModel)]="candidati.titoloStudio">
+                <option value="Licenza Media">Licenza Media</option>
+                <option value="Diploma di Istruzione Secondaria Superiore">Diploma di Istruzione Secondaria Superiore</option>
+                <option value="Laurea Triennale">Laurea Triennale</option>
+                <option value="Laurea Specialistica">Laurea Specialistica</option>
+                <option value="Laurea a Ciclo Unico">Laurea a Ciclo Unico</option>
+                <option value="Dottorato di Ricerca">Dottorato di Ricerca</option>
+                <option value="Master Universitario">Master Universitario</option>
+                <option value="Altro">Altro</option>
+              </select>
+            </td>
+            <td>
+                <input  [(ngModel)]="candidati.titoloLaurea">
+            </td>
+            <td>
+              <input type="date"  [(ngModel)]="candidati.dataCandidatura">
+            </td>
+            <td>
+                <input  [(ngModel)]="candidati.rangeDataCandidatura">
+            </td>
+            <td>
+              <select [(ngModel)]="candidati.colloquioConoscitivo">
+                <option value="true">SI</option>
+  			      	<option value="false">NO</option>
+              </select>
+            </td>
+            <td>
+              <input  type="date" [(ngModel)]="candidati.dataColloquio">
+          </td>
+            <td>
+                <input  [(ngModel)]="candidati.candidatiTramite">
+            </td>
+            <td>
+              <select  [(ngModel)]="candidati.idoneita">
+                <option value="true">SI</option>
+  			      	<option value="false">NO</option>
+              </select>
+          </td>
+          <td>
+            <button (click)=update(candidati)>Salva</button>
+          </td>
+          <td>
+            <button (click)="delete(candidati)">Cancella</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-md-1" >
+
+    </div >
+  </div>
+</div>

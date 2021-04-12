@@ -1,0 +1,254 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-md-10">
+      <table>
+        <tr>
+          <th>
+            ID Corso
+          </th>
+          <th>
+            ID Candidato
+          </th>
+           <th>
+              Nome Progetto
+          </th>
+          <th>
+              Luogo
+          </th>
+          <th>
+            Valutazione Programmazione
+          </th>
+          <th>
+              Valutazione Teamwork
+          </th>
+          <th>
+              Valutazione Problem Solving
+          </th>
+          <th>
+              Valutazione Comunicazioni
+          </th>
+          <th>
+              Settimana
+          </th>
+          <th>
+              ID Staff Supervisore
+          </th>
+          <th>
+            Data Inizio
+          </th>
+        </tr>
+        
+        
+        <tr>
+          <td>
+            <input placeholder="Id Corso" [(ngModel)]="corsotoinsert.id"> <!-- farlo per ogni elemento della DTO -->
+          </td>
+          <td>
+              <input placeholder="Id Candidato" [(ngModel)]="corsotoinsert.idCandidatiId">
+          </td>           
+          <td>
+              <input placeholder="Nome Progetto" [(ngModel)]="corsotoinsert.nomeProgetto">
+          </td>
+          <td>
+              <select placeholder="Luogo" [(ngModel)]="corsotoinsert.luogo">
+              <option value="Da casa">Da casa</option>
+              <option value="In sede">In sede</option> 
+            </select>
+          </td>             
+          <td>
+              <select placeholder="Valutazione Programmazione" [(ngModel)]="corsotoinsert.valutazioneProgrammazione">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+             </select>
+          </td>               
+          <td>
+              <select placeholder="Valutazione Teamwork" [(ngModel)]="corsotoinsert.valutazioneTeamwork">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+             </select>
+          </td>               
+          <td>
+              <select placeholder="Valutazione Problem Solving" [(ngModel)]="corsotoinsert.valutazioneProblemSolving">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+             </select>
+          </td>              
+          <td>
+              <select placeholder="Valutazione Comunicazioni" [(ngModel)]="corsotoinsert.valutazioneComunicazioni">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+             </select>
+          </td>               
+          <td>
+              <select placeholder="Settimana" [(ngModel)]="corsotoinsert.settimana">
+              <option value="1: Java Console">1: Java Console</option>
+              <option value="2: Jsp">2: Jsp</option>
+              <option value="3: Spring">3: Spring</option>
+              <option value="4: Springrest e Angular">4: Springrest e Angular</option>
+              <option value="5: Jhipster e Microservizi">5: Jhipster e Microservizi</option>
+              <option value="Altro">Altro</option>
+              </select>
+          </td>               
+          <td>
+              <input placeholder="Id Staff" [(ngModel)]="corsotoinsert.idStaffId">
+          </td>               
+          <td>
+              <input type="date" placeholder="Data Inizio" [(ngModel)]="corsotoinsert.dataInizio">
+          </td>            
+  
+          <td>
+            <button (click)="insert(corsotoinsert)">Inserisci</button>
+          </td>
+          <td>
+            <button (click)="clear()">Cancella</button>
+          </td>
+        </tr>
+        <tr *ngFor="let corso of corso">
+          <td>
+            <input [(ngModel)]="corso.id">
+          </td>
+          <td>
+            <input [(ngModel)]="corso.idCandidatiId">
+          </td>
+          <td>
+              <input [(ngModel)]="corso.nomeProgetto">
+          </td>
+          <td>
+            <select [(ngModel)]="corso.luogo">
+            <option value="Da casa">Da casa</option>
+            <option value="In sede">In sede</option>
+            </select> 
+        </td>    
+          <td>
+              <select [(ngModel)]="corso.valutazioneProgrammazione">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+             </select>
+          </td>
+          <td>
+              <select [(ngModel)]="corso.valutazioneTeamwork">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+             </select>
+          </td>
+          <td>
+              <select [(ngModel)]="corso.valutazioneProblemSolving">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+             </select>
+          </td>
+          <td>
+              <select [(ngModel)]="corso.valutazioneComunicazioni">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+             </select>
+          </td>
+          <td>
+            <select [(ngModel)]="corso.oreTotali">
+            <option value="1: Java Console">1: Java Console</option>
+            <option value="2: Jsp">2: Jsp</option>
+            <option value="3: Spring">3: Spring</option>
+            <option value="4: Springrest e Angular">4: Springrest e Angular</option>
+            <option value="5: Jhipster e Microservizi">5: Jhipster e Microservizi</option>
+            <option value="Altro">Altro</option>
+            </select>
+        </td>    
+          
+          <td>
+              <input [(ngModel)]="corso.settimana">
+          </td>
+          <td>
+              <input [(ngModel)]="corso.idStaffId">
+          </td>
+          <td>
+              <input type="date" [(ngModel)]="corso.dataInizio">
+          </td>
+          <td>
+            <button (click)=update(corso)>Salva</button>
+          </td>
+          <td>
+            <button (click)="delete(corso)">Cancella</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-md-1">
+
+    </div>
+  </div>
+</div>

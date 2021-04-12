@@ -1,0 +1,299 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-md-10">
+      <table>
+        <tr>
+          <th>
+            ID Selezione
+          </th>
+          <th>
+            ID Candidato
+          </th>
+          <th>
+            ID Esaminatore
+          </th>
+          <th>
+            Punteggio Logica
+          </th>
+          <th>
+            Punteggio Inglese
+          </th>
+          <th>
+            Punteggio SQL
+          </th>
+          <th>
+            Punteggio HTML e CSS
+          </th>
+          <th>
+            Punteggio Java
+          </th>
+          <th>
+            Punteggio Totale Scritto
+          </th>
+          <th>
+            Data Test Scritto
+          </th>
+          <th>
+            Data Prove Orali
+          </th>
+          <th>
+            Valutazione Test di Gruppo
+          </th>
+          <th>
+            Valutazione Colloquio Tecnico
+          </th>
+      
+        </tr>
+        <tr>
+          <td>
+            <input placeholder="idSelezioneId" [(ngModel)]="selezionetoinsert.id">
+          </td>
+          <td>
+            <input placeholder="idCandidatiId" [(ngModel)]="selezionetoinsert.idCandidati">
+          </td>
+          <td>
+            <select placeholder="punteggioLogica" [(ngModel)]="selezionetoinsert.punteggioLogica">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+            </select>
+          </td>
+          <td>
+            <select placeholder="punteggioInglese" [(ngModel)]="selezionetoinsert.punteggioPhp">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+             </select>
+          </td>
+          <td>
+            <select placeholder="punteggioSql" [(ngModel)]="selezionetoinsert.punteggioSql">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+             </select>
+          </td>
+          <td>
+            <select placeholder="punteggioHtmlCss" [(ngModel)]="selezionetoinsert.punteggioHtmlCss">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+             </select>
+          </td>
+          <td>
+            <select placeholder="punteggioJava" [(ngModel)]="selezionetoinsert.punteggioJava">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+             </select>
+          </td>
+          <td>
+            <input placeholder="punteggioTotaleScritto" [(ngModel)]="selezionetoinsert.punteggioTotaleScritto">
+          </td>
+          <td>
+            <input type="date" placeholder="dataTestScritto" [(ngModel)]="selezionetoinsert.dataTestScritto">
+          </td>
+          <td>
+            <input type="date" placeholder="dataTestOrale" [(ngModel)]="selezionetoinsert.dataTestOrale">
+          </td>
+          <td>
+            <select placeholder="valutazioneTestGruppo" [(ngModel)]="selezionetoinsert.valutazioneTestGruppo">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+             </select>
+          </td>
+          <td>
+            <select placeholder="valutazioneColloquioTecnico" [(ngModel)]="selezionetoinsert.valutazioneColloquioTecnico">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+             </select>
+          </td>
+          <td>
+            <button (click)="insert(selezionetoinsert)">Inserisci</button>
+          </td>
+          <td>
+            <button (click)="clear()">Cancella</button>
+          </td>
+        </tr>
+        <tr *ngFor="let selezione of selezione">
+          <td>
+            <input [(ngModel)]="selezione.id">
+          </td>
+          <td>
+            <input [(ngModel)]="selezione.idCandidatiId">
+          </td>
+          <td>
+            <input [(ngModel)]="selezione.idEsaminatoreId">
+          </td>
+          <td>
+            <select [(ngModel)]="selezione.punteggioLogica">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+             </select>
+          </td>
+          <td>
+            <select [(ngModel)]="selezione.punteggioInglese">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+             </select>
+          </td>
+          <td>
+            <select [(ngModel)]="selezione.punteggioSql">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+             </select>
+          </td>
+          <td>
+            <select [(ngModel)]="selezione.punteggioHtmlCss">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+             </select>
+          </td>
+          <td>
+            <select [(ngModel)]="selezione.punteggioJava">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+             </select>
+          </td>
+          <td>
+            <input [(ngModel)]="selezione.punteggioTotaleScritto">
+          </td>
+          <td>
+            <input type="date" [(ngModel)]="selezione.dataTestScritto">
+          </td>
+          <td>
+            <input type="date" [(ngModel)]="selezione.dataTestOrale">
+          </td>
+          <td>
+            <select [(ngModel)]="selezione.valutazioneTestGruppo">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+             </select>
+          </td>
+          <td>
+            <select [(ngModel)]="selezione.valutazioneColloquioTecnico">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+             </select>
+          </td>
+          <td>
+            <button (click)=update(selezione)>Salva</button>
+          </td>
+          <td>
+            <button (click)="delete(selezione)">Cancella</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-md-1">
+
+    </div>
+  </div>
+</div>

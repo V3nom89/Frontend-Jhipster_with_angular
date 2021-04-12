@@ -1,0 +1,78 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="sidenav">
+            <button class="menubtn">
+                <a [routerLink]="['/admin-dashboard']"> <i class="fas fa-home" style="margin-right: 10px"> </i>
+                    Dashboard </a>
+            </button>
+            <button type="button" class="menubtn" data-toggle="collapsebtn" data-target="#account"
+                (click)="accountcollapse()">
+                <i class="fas fa-user" style="margin-right: 15px"></i> Account
+            </button>
+            <div class="collapsebtn" id="account" *ngIf="isAccountCollapsed">
+                <button class="menubtn" style="background-color: #334247; padding-left: 40px">
+                    <a [routerLink]="['/admin-dashboard/work-in-progress']"> <i class="fas fa-user-edit"
+                            style="margin-right: 15px"></i>
+                        Aggiorna il Profilo</a>
+                </button>
+                <button class="menubtn" style="background-color: #334247; padding-left: 40px">
+                    <a [routerLink]="['/admin-dashboard/work-in-progress']"><i class="fas fa-file-alt"
+                            style="margin-right: 15px"></i>Informazioni Generali</a>
+                </button>
+            </div>
+            <button type="button" class="menubtn" data-toggle="collapsebtn" data-target="#users"
+                (click)="userscollapse()">
+                <i class="fas fa-users" style="margin-right: 15px"></i>Users
+            </button>
+            <div class="collapsebtn" id="users" *ngIf="isUserCollapsed">
+                <button class="menubtn" style="padding-left: 40px; background-color: #334247;">
+                    <a [routerLink]="['/admin-dashboard/users']"> <i class="fas fa-edit" style="margin-right: 10px">
+                        </i> Gestisci Users </a>
+                </button>
+            </div>
+            <button type="button" class="menubtn" data-toggle="collapsebtn" data-target="#candidati"
+                (click)="candidaticollapse()">
+                <i class="fas fa-users" style="margin-right: 15px"></i>Candidati
+            </button>
+            <div class="collapsebtn" id="candidati" *ngIf="isCandidatiCollapsed">
+                <button class="menubtn" style="padding-left: 40px; background-color: #334247;">
+                    <a [routerLink]="['/admin-dashboard/candidati']"> <i class="fas fa-edit" style="margin-right: 10px">
+                        </i> Gestisci Candidati </a>
+                </button>
+            </div>
+            <button type="button" class="menubtn" data-toggle="collapsebtn" data-target="#selezione"
+                (click)="selezionecollapse()">
+                <i class="fas fa-users" style="margin-right: 15px"></i>Selezione
+            </button>
+            <div class="collapsebtn" id="selezione" *ngIf="isSelezioneCollapsed">
+                <button class="menubtn" style="padding-left: 40px; background-color: #334247;">
+                    <a [routerLink]="['/admin-dashboard/iterSelettivo']"> <i class="fas fa-edit" style="margin-right: 10px">
+                        </i> Gestisci Selezione </a>
+                </button>
+            </div>
+            <button type="button" class="menubtn" data-toggle="collapsebtn" data-target="#corso"
+                (click)="corsocollapse()">
+                <i class="fas fa-users" style="margin-right: 15px"></i>Corso
+            </button>
+            <div class="collapsebtn" id="corso" *ngIf="isCorsoCollapsed">
+                <button class="menubtn" style="padding-left: 40px; background-color: #334247;">
+                    <a [routerLink]="['/admin-dashboard/corso']"> <i class="fas fa-edit" style="margin-right: 10px">
+                        </i> Gestisci Corso </a>
+                </button>
+            </div>
+            <button type="button" class="menubtn" data-toggle="collapsebtn" data-target="#staff"
+                (click)="staffcollapse()">
+                <i class="fas fa-users" style="margin-right: 15px"></i>Staff
+            </button>
+            <div class="collapsebtn" id="staff" *ngIf="isStaffCollapsed">
+                <button class="menubtn" style="padding-left: 40px; background-color: #334247;">
+                    <a [routerLink]="['/admin-dashboard/staff']"> <i class="fas fa-edit" style="margin-right: 10px">
+                        </i> Gestisci Staff </a>
+                </button>
+            </div>
+            <button class="menubtn" (click)="logout()">
+                <i class="fas fa-sign-out-alt" style="margin-right: 15px"></i>Logout
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+*{
+    overflow: hidden;
+}
+#barra{
+    overflow: Auto;
+       color: #000000;
+       font: Normal 12px Verdana;
+       width: 150px;
+       height: 200px;
+       margin: 0px;
+       padding: 5px;
+   }

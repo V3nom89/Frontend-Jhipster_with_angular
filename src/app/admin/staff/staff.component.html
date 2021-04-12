@@ -1,0 +1,134 @@
+<div class="container">
+  <div class="row mt-5">
+      <div class="col-md-1">
+
+      </div>
+      <div class="col-md-10">
+          <table>
+              <tr>
+                  <th>
+                      ID Staff
+                  </th>
+                  <th>
+                      Nome
+                  </th>
+                  <th>
+                      Cognome
+                  </th>
+                  <th>
+                        Email
+                  </th>
+                  <th>
+                        Codice Fiscale
+                  </th>
+                  <th>
+                      Numero di Telefono
+                  </th>
+                  <th>
+                    Posizione
+                    </th>
+                  <th>
+                      Data di Assunzione
+                  </th>
+                  <th>
+                    Cliente
+                    </th>
+                  <th>
+                      Sede
+                  </th>
+                  <th>
+                      Ore Settimanali
+                  </th>
+              </tr>
+              <tr>
+                  <td>
+                      <input placeholder="idStaff" [(ngModel)]="stafftoinsert.id">
+                  </td>
+                  <td>
+                      <input placeholder="nome" [(ngModel)]="stafftoinsert.nome">
+                  </td>
+                  <td>
+                      <input placeholder="cognome" [(ngModel)]="stafftoinsert.cognome">
+                  </td>
+                  <td>
+                      <input placeholder="email" [(ngModel)]="stafftoinsert.email">
+                  </td>
+                  <td>
+                    <input placeholder="codiceFiscale" [(ngModel)]="stafftoinsert.codiceFiscale">
+                    </td>
+                  <td>
+                      <input placeholder="numeroTelefono" [(ngModel)]="stafftoinsert.numeroTelefono">
+                  </td>
+                  <td>
+                    <input placeholder="posizione" [(ngModel)]="stafftoinsert.posizione">
+                </td>
+                  <td>
+                      <input type="date" placeholder="dataAssunzione" [(ngModel)]="stafftoinsert.dataAssunzione">
+                  </td>
+                  <td>
+                    <input placeholder="cliente" [(ngModel)]="stafftoinsert.cliente">
+                </td>
+                  <td>
+                      <input placeholder="sede" [(ngModel)]="stafftoinsert.sede">
+                  </td>
+                  <td>
+                      <input placeholder="oreSettimanali" [(ngModel)]="stafftoinsert.oreSettimanali">
+                  </td>
+                  
+                  <td>
+                      <button (click)="insert(stafftoinsert)">Inserisci</button>
+                  </td>
+                  <td>
+                      <button (click)="clear()">Cancella</button>
+                  </td>
+              </tr>
+              <tr *ngFor="let staff of staff">
+                  <td>
+                     <input [(ngModel)]="staff.idStaff">
+                  </td>  
+                  <td>
+                      <input [(ngModel)]="staff.nome">
+                  </td>
+                  <td>
+                      <input [(ngModel)]="staff.cognome">
+                  </td>
+                  <td>
+                      <input [(ngModel)]="staff.email">
+                  </td>
+                  <td>
+                    <input [(ngModel)]="staff.codiceFiscale">
+                </td>
+                  <td>
+                      <input [(ngModel)]="staff.numeroTelefono">
+                  </td>
+                  <td>
+                    <input [(ngModel)]="staff.posizione">
+                </td>
+                  <td>
+                      <input type="date" [(ngModel)]="staff.dataAssunzione">
+                  </td>
+                  <td>
+                    <input [(ngModel)]="staff.cliente">
+                </td>
+                  <td>
+                      <input [(ngModel)]="staff.sede">
+                  </td>
+                  <td>
+                      <input [(ngModel)]="staff.oreSettimanali">
+                  </td>
+                  
+                  
+                  <td>
+                      <button (click)=update(staff)>Salva</button>
+                  </td>
+                  <td>
+                      <button (click)="delete(staff)">Cancella</button>
+                  </td>
+              </tr>
+          </table>
+      </div>
+      <div class="col-md-1">
+
+      </div>
+  </div>
+</div>
